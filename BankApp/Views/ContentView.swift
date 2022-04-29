@@ -14,37 +14,45 @@ struct ContentView: View {
     @State private var searchText = ""
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                ActivityIndicatorView(isVisible: $bankVM.isLoading, type: .equalizer(count: 5))
-                    .foregroundColor(.blue)
-                    .frame(width: 90, height: 90, alignment: .center)
-                    
-                ScrollView {
-                    LazyVGrid(columns: [GridItem()],spacing: 15, content: {
-                        ForEach(searchResults, id: \.self) { item in
-                            VStack(alignment: .leading, spacing: 10, content: {
-                                NavigationLink(destination: BankDetailView(item: item)) {
-                                    Text(item.sehir).bold()
-                                    Text(item.ilce ?? "").bold()
-                                    Text(item.bankaKodu ?? "").bold()
-                                }
-                                
-                                
-                            })
-                            .padding(.horizontal)
-                            .frame(width: 400, height: 70, alignment: .leading)
-                            .background(Color(.systemGray6))
-                            .foregroundColor(.black)
-                            .cornerRadius(10)
+        
+        Group {
+            if networkManager.isConnected {
+                NavigationView {
+                    ZStack {
+                        ActivityIndicatorView(isVisible: $bankVM.isLoading, type: .equalizer(count: 5))
+                            .foregroundColor(.blue)
+                            .frame(width: 90, height: 90, alignment: .center)
                             
+                        ScrollView {
+                            LazyVGrid(columns: [GridItem()],spacing: 15, content: {
+                                ForEach(searchResults, id: \.self) { item in
+                                    VStack(alignment: .leading, spacing: 10, content: {
+                                        NavigationLink(destination: BankDetailView(item: item)) {
+                                            Text(item.sehir).bold()
+                                            Text(item.ilce ?? "").bold()
+                                            Text(item.bankaKodu ?? "").bold()
+                                        }
+                                        
+                                        
+                                    })
+                                    .padding(.horizontal)
+                                    .frame(width: 400, height: 70, alignment: .leading)
+                                    .background(Color(.systemGray6))
+                                    .foregroundColor(.black)
+                                    .cornerRadius(10)
+                                    
+                                }
+                            })
                         }
-                    })
+                    }
+                    .searchable(text: $searchText,prompt: "Şehir Ara")
+        //            .background(Color(.systemGray6))
+                    .navigationBarTitle("Şubeler")
                 }
+            }else {
+                OfflineView()
             }
-            .searchable(text: $searchText,prompt: "Şehir Ara")
-//            .background(Color(.systemGray6))
-            .navigationBarTitle("Şubeler")
+
         }
     }
     
