@@ -44,7 +44,7 @@ struct ContentView: View {
             }
             .searchable(text: $searchText,prompt: "Şehir Ara")
 //            .background(Color(.systemGray6))
-            .navigationBarTitle("Şubeler",displayMode: .inline)
+            .navigationBarTitle("Şubeler")
         }
     }
     
