@@ -13,6 +13,7 @@
 		D72365D628196B4A0032ED29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72365D528196B4A0032ED29 /* Assets.xcassets */; };
 		D72365D928196B4A0032ED29 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D72365D828196B4A0032ED29 /* Preview Assets.xcassets */; };
 		D72365E028196B6E0032ED29 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72365DF28196B6E0032ED29 /* NetworkManager.swift */; };
+		D778006E281CAEBC0014DE6A /* OfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D778006D281CAEBC0014DE6A /* OfflineView.swift */; };
 		D7B66017281AA3A500DA86FD /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = D7B66016281AA3A500DA86FD /* ActivityIndicatorView */; };
 		D7B66019281ABB9100DA86FD /* BankDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B66018281ABB9100DA86FD /* BankDetailView.swift */; };
 		D7B6601D281AC62700DA86FD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7B6601C281AC62700DA86FD /* GoogleService-Info.plist */; };
@@ -30,6 +31,7 @@
 		D72365D528196B4A0032ED29 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D72365D828196B4A0032ED29 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D72365DF28196B6E0032ED29 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D778006D281CAEBC0014DE6A /* OfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineView.swift; sourceTree = "<group>"; };
 		D7B66012281A8BCD00DA86FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D7B66018281ABB9100DA86FD /* BankDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankDetailView.swift; sourceTree = "<group>"; };
 		D7B6601C281AC62700DA86FD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				D72365D128196B480032ED29 /* BankAppApp.swift */,
 				D72365D328196B480032ED29 /* ContentView.swift */,
 				D7B66018281ABB9100DA86FD /* BankDetailView.swift */,
+				D778006D281CAEBC0014DE6A /* OfflineView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				D72365E028196B6E0032ED29 /* NetworkManager.swift in Sources */,
 				D72365D428196B480032ED29 /* ContentView.swift in Sources */,
 				D7D427AE2819787C003A720F /* Bank.swift in Sources */,
+				D778006E281CAEBC0014DE6A /* OfflineView.swift in Sources */,
 				D7B66019281ABB9100DA86FD /* BankDetailView.swift in Sources */,
 				D7D427B02819788B003A720F /* BankViewModel.swift in Sources */,
 				D72365D228196B480032ED29 /* BankAppApp.swift in Sources */,
